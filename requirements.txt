@@ -1,0 +1,2 @@
+mkdocs-with-pdf
+mkdocs-wavedrom-plugin

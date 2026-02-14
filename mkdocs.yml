@@ -1,0 +1,59 @@
+site_name: PlayStation 2 Documentation 
+site_url: https://psx-spx.consoledev.net/
+#repo_url: https://github.com/psx-spx/psx-spx.github.io/
+#edit_uri: edit/master/docs/
+
+theme:
+  name: material
+  features:
+    - navigation: expanded
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+   #   toggle:
+   #     icon: material/toggle-switch-off-outline
+   #     name: Switch to dark mode
+
+    # Dark mode
+    #- media: "(prefers-color-scheme: dark)"
+    #  scheme: slate
+    #  primary: blue
+    #  accent: blue
+    #  toggle:
+    #    icon: material/toggle-switch
+    #    name: Switch to light mode
+  icon:
+    logo: material/sony-playstation
+
+plugins:
+  - search
+  - with-pdf:
+      output_path: ps2doc.pdf
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/wavedrom/3.1.0/wavedrom.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/wavedrom/3.1.0/skins/default.js
+  - js/wavedrom_loader.js
+
+
+markdown_extensions:
+  - markdown_wavedrom
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.highlight
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.superfences
+  - pymdownx.tasklist
+  - pymdownx.tilde
+
+nav:
+  - Home: index.md
+  - EE:
+    - ee/memory.md
+  - IOP:
+    - iop/memory.md
+    - iop/sio2.md
