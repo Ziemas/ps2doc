@@ -1,12 +1,12 @@
 site_name: PlayStation 2 Documentation 
-site_url: https://psx-spx.consoledev.net/
-#repo_url: https://github.com/psx-spx/psx-spx.github.io/
-#edit_uri: edit/master/docs/
+site_url: https://docs.ziemas.se/
+repo_url: https://github.com/ziemas/ps2doc/
 
 theme:
-  name: material
   features:
-    - navigation: expanded
+    - navigation.expand
+
+  name: material
   palette:
     # Light mode
     - media: "(prefers-color-scheme: light)"
@@ -30,14 +30,11 @@ theme:
 
 plugins:
   - search
-  - with-pdf:
-      output_path: ps2doc.pdf
 
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/wavedrom/3.1.0/wavedrom.min.js
   - https://cdnjs.cloudflare.com/ajax/libs/wavedrom/3.1.0/skins/default.js
   - js/wavedrom_loader.js
-
 
 markdown_extensions:
   - markdown_wavedrom
@@ -56,4 +53,5 @@ nav:
     - ee/memory.md
   - IOP:
     - iop/memory.md
+    - iop/dma.md
     - iop/sio2.md
