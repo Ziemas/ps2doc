@@ -1,0 +1,993 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ziemas.github.io/ps2doc/iop/sio2/">
+      
+      
+        <link rel="prev" href="../dma/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.4">
+    
+    
+      
+        <title>SIO2 - PlayStation 2 Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.240905d7.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sio2" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="PlayStation 2 Documentation" class="md-header__button md-logo" aria-label="PlayStation 2 Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 4.27c1.38.26 3.4.87 4.5 1.23 2.75.95 3.69 2.13 3.69 4.79 0 2.6-1.6 3.58-3.64 2.6V8.05c0-.55-.1-1.08-.64-1.23-.41-.13-.65.25-.65.81v12.1L9.5 18.69V4.27m3.87 13.35 5.25-1.87c.6-.21.69-.51.21-.67-.49-.16-1.36-.11-1.96.1l-3.5 1.23v-1.96l.21-.07s1.01-.38 2.42-.51c1.43-.16 3.17.02 4.53.53 1.54.49 1.72 1.21 1.33 1.7-.4.5-1.36.85-1.36.85l-7.13 2.55v-1.88m-9.87-.2C1.93 17 1.66 16.05 2.38 15.5c.67-.5 1.8-.85 1.8-.85L8.86 13v1.88L5.5 16.09c-.6.21-.69.51-.21.67.48.16 1.36.12 1.95-.1l1.62-.58v1.69l-.32.06c-1.62.26-3.34.17-5.04-.41Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PlayStation 2 Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              SIO2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ziemas/ps2doc/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="PlayStation 2 Documentation" class="md-nav__button md-logo" aria-label="PlayStation 2 Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 4.27c1.38.26 3.4.87 4.5 1.23 2.75.95 3.69 2.13 3.69 4.79 0 2.6-1.6 3.58-3.64 2.6V8.05c0-.55-.1-1.08-.64-1.23-.41-.13-.65.25-.65.81v12.1L9.5 18.69V4.27m3.87 13.35 5.25-1.87c.6-.21.69-.51.21-.67-.49-.16-1.36-.11-1.96.1l-3.5 1.23v-1.96l.21-.07s1.01-.38 2.42-.51c1.43-.16 3.17.02 4.53.53 1.54.49 1.72 1.21 1.33 1.7-.4.5-1.36.85-1.36.85l-7.13 2.55v-1.88m-9.87-.2C1.93 17 1.66 16.05 2.38 15.5c.67-.5 1.8-.85 1.8-.85L8.86 13v1.88L5.5 16.09c-.6.21-.69.51-.21.67.48.16 1.36.12 1.95-.1l1.62-.58v1.69l-.32.06c-1.62.26-3.34.17-5.04-.41Z"/></svg>
+
+    </a>
+    PlayStation 2 Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ziemas/ps2doc/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          EE
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          EE
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ee/memory/" class="md-nav__link">
+        EE Memory Map
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          IOP
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          IOP
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../memory/" class="md-nav__link">
+        IOP Memory Map
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dma/" class="md-nav__link">
+        DMA
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          SIO2
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        SIO2
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sio2-register-summary" class="md-nav__link">
+    SIO2 Register Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sio2-register-definitions" class="md-nav__link">
+    SIO2 Register Definitions
+  </a>
+  
+    <nav class="md-nav" aria-label="SIO2 Register Definitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transmit-memory-sio2_mem_fifo_tx-receive-memory-sio2_mem_fifo_rx" class="md-nav__link">
+    Transmit Memory (SIO2_MEM_FIFO_TX) &amp; Receive Memory (SIO2_MEM_FIFO_RX)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-queue-sio2_reg_cmd_queue" class="md-nav__link">
+    Command Queue (SIO2_REG_CMD_QUEUE)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#port-control-0-sio2_reg_port0-3_ctrl0" class="md-nav__link">
+    Port Control 0 (SIO2_REG_PORT[0-3]_CTRL0)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#port-control-1-sio2_reg_port0-3_ctrl1" class="md-nav__link">
+    Port Control 1 (SIO2_REG_PORT[0-3]_CTRL1)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transmit-sio2_reg_tx-receive-sio2_reg_rx" class="md-nav__link">
+    Transmit (SIO2_REG_TX) &amp; Receive (SIO2_REG_RX)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control-register-sio2_reg_ctrl" class="md-nav__link">
+    Control register (SIO2_REG_CTRL)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-status-sio2_reg_cmd_stat" class="md-nav__link">
+    Command status (SIO2_REG_CMD_STAT)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#port-status-sio2_reg_port_stat" class="md-nav__link">
+    Port status (SIO2_REG_PORT_STAT)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fifo-status-sio2_reg_fifo_stat" class="md-nav__link">
+    FIFO status (SIO2_REG_FIFO_STAT)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fifo-position-sio2_reg_fifotxrx" class="md-nav__link">
+    FIFO position (SIO2_REG_FIFO[TX|RX])
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interrupt-status-sio2_reg_irq_stat" class="md-nav__link">
+    Interrupt status (SIO2_REG_IRQ_STAT)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sio2-register-summary" class="md-nav__link">
+    SIO2 Register Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sio2-register-definitions" class="md-nav__link">
+    SIO2 Register Definitions
+  </a>
+  
+    <nav class="md-nav" aria-label="SIO2 Register Definitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transmit-memory-sio2_mem_fifo_tx-receive-memory-sio2_mem_fifo_rx" class="md-nav__link">
+    Transmit Memory (SIO2_MEM_FIFO_TX) &amp; Receive Memory (SIO2_MEM_FIFO_RX)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-queue-sio2_reg_cmd_queue" class="md-nav__link">
+    Command Queue (SIO2_REG_CMD_QUEUE)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#port-control-0-sio2_reg_port0-3_ctrl0" class="md-nav__link">
+    Port Control 0 (SIO2_REG_PORT[0-3]_CTRL0)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#port-control-1-sio2_reg_port0-3_ctrl1" class="md-nav__link">
+    Port Control 1 (SIO2_REG_PORT[0-3]_CTRL1)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transmit-sio2_reg_tx-receive-sio2_reg_rx" class="md-nav__link">
+    Transmit (SIO2_REG_TX) &amp; Receive (SIO2_REG_RX)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control-register-sio2_reg_ctrl" class="md-nav__link">
+    Control register (SIO2_REG_CTRL)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-status-sio2_reg_cmd_stat" class="md-nav__link">
+    Command status (SIO2_REG_CMD_STAT)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#port-status-sio2_reg_port_stat" class="md-nav__link">
+    Port status (SIO2_REG_PORT_STAT)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fifo-status-sio2_reg_fifo_stat" class="md-nav__link">
+    FIFO status (SIO2_REG_FIFO_STAT)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fifo-position-sio2_reg_fifotxrx" class="md-nav__link">
+    FIFO position (SIO2_REG_FIFO[TX|RX])
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interrupt-status-sio2_reg_irq_stat" class="md-nav__link">
+    Interrupt status (SIO2_REG_IRQ_STAT)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="sio2">SIO2</h1>
+<p>The Playstation 2 uses SPI to talk to memory cards and controller port peripherals, SIO2 is the controller in charge of this task.</p>
+<p>Because the transmit and receive pins are pulled high on the board, reads from an empty slot will return 0xff.</p>
+<h3 id="sio2-register-summary">SIO2 Register Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Register</th>
+<th>Address</th>
+<th>Access</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SIO2_MEM_FIFO_TX</td>
+<td>0x1f808000</td>
+<td>RW</td>
+<td>256 byte transmit FIFO</td>
+</tr>
+<tr>
+<td>SIO2_MEM_FIFO_RX</td>
+<td>0x1f808100</td>
+<td>RW</td>
+<td>256 byte receive FIFO</td>
+</tr>
+<tr>
+<td>SIO2_REG_CMD_QUEUE</td>
+<td>0x1f808200</td>
+<td>RW</td>
+<td>16 entry command queue</td>
+</tr>
+<tr>
+<td>SIO2_REG_PORT0_CTRL0</td>
+<td>0x1f808240</td>
+<td>RW</td>
+<td>Controller 0</td>
+</tr>
+<tr>
+<td>SIO2_REG_PORT0_CTRL1</td>
+<td>0x1f808244</td>
+<td>RW</td>
+<td>Controller 0</td>
+</tr>
+<tr>
+<td>SIO2_REG_PORT1_CTRL0</td>
+<td>0x1f808248</td>
+<td>RW</td>
+<td>Controller 1</td>
+</tr>
+<tr>
+<td>SIO2_REG_PORT1_CTRL1</td>
+<td>0x1f80824c</td>
+<td>RW</td>
+<td>Controller 1</td>
+</tr>
+<tr>
+<td>SIO2_REG_PORT2_CTRL0</td>
+<td>0x1f808250</td>
+<td>RW</td>
+<td>Memory card 0</td>
+</tr>
+<tr>
+<td>SIO2_REG_PORT2_CTRL1</td>
+<td>0x1f808254</td>
+<td>RW</td>
+<td>Memory card 0</td>
+</tr>
+<tr>
+<td>SIO2_REG_PORT3_CTRL0</td>
+<td>0x1f808258</td>
+<td>RW</td>
+<td>Memory card 1</td>
+</tr>
+<tr>
+<td>SIO2_REG_PORT3_CTRL1</td>
+<td>0x1f80825c</td>
+<td>RW</td>
+<td>Memory card 1</td>
+</tr>
+<tr>
+<td>SIO2_REG_TX</td>
+<td>0x1f808260</td>
+<td>W</td>
+<td>8/16/32-bit transmit</td>
+</tr>
+<tr>
+<td>SIO2_REG_RX</td>
+<td>0x1f808264</td>
+<td>R</td>
+<td>8/16/32-bit receive</td>
+</tr>
+<tr>
+<td>SIO2_REG_CTRL</td>
+<td>0x1f808268</td>
+<td>RW</td>
+<td>Control register</td>
+</tr>
+<tr>
+<td>SIO2_REG_CMD_STAT</td>
+<td>0x1f80826c</td>
+<td>R</td>
+<td>Command status</td>
+</tr>
+<tr>
+<td>SIO2_REG_PORT_STAT</td>
+<td>0x1f808270</td>
+<td>R</td>
+<td>Port status</td>
+</tr>
+<tr>
+<td>SIO2_REG_FIFO_STAT</td>
+<td>0x1f808274</td>
+<td>R</td>
+<td>FIFO status</td>
+</tr>
+<tr>
+<td>SIO2_REG_FIFO_TX</td>
+<td>0x1f808278</td>
+<td>RW</td>
+<td>TX FIFO head and tail position</td>
+</tr>
+<tr>
+<td>SIO2_REG_FIFO_RX</td>
+<td>0x1f80827c</td>
+<td>RW</td>
+<td>RX FIFO head and tail position</td>
+</tr>
+<tr>
+<td>SIO2_REG_IRQ_STAT</td>
+<td>0x1f808280</td>
+<td>RW</td>
+<td>Interrupt status</td>
+</tr>
+<tr>
+<td>SIO2_REG_REMOTE_CTRL</td>
+<td>0x1f808284</td>
+<td>RW</td>
+<td>For IOP rev &gt;= 0x23</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="sio2-register-definitions">SIO2 Register Definitions</h2>
+<h3 id="transmit-memory-sio2_mem_fifo_tx-receive-memory-sio2_mem_fifo_rx">Transmit Memory (SIO2_MEM_FIFO_TX) &amp; Receive Memory (SIO2_MEM_FIFO_RX)</h3>
+<p>Storage for the contents of the TX/RX FIFO's is viewable at address 0x1f808000.</p>
+<h3 id="command-queue-sio2_reg_cmd_queue">Command Queue (SIO2_REG_CMD_QUEUE)</h3>
+<p>A 16 entry queue of commands to be executed.</p>
+<p>Each entry is cleared to zero by the controller on reset.</p>
+<script type="WaveDrom">{reg: [
+{bits: 2,  name: 'port', rotate: -90},
+{bits: 1,  name: 'pause', rotate: -90},
+{bits: 1},
+{bits: 1,  name: 'tx_dma', rotate: -90},
+{bits: 1,  name: 'rx_dma', rotate: -90},
+{bits: 2,  name: 'cfg'},
+{bits: 9,  name: 'tx_size'},
+{bits: 1},
+{bits: 9,  name: 'rx_size'},
+{bits: 3},
+{bits: 1,  name: 'clk_div', rotate: -90},
+{bits: 1,  name: 'ackwait', rotate: -90},
+], config:{lanes: 1, vspace: 90}}</script>
+<table>
+<thead>
+<tr>
+<th>Bits</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[31]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[30]</td>
+<td>clk_div</td>
+<td>Selects which divider from PORT_CTRL0 to use.</td>
+</tr>
+<tr>
+<td>[26:18]</td>
+<td>rx_size</td>
+<td>Number of bytes to read into the RX FIFO</td>
+</tr>
+<tr>
+<td>[16:8]</td>
+<td>tx_size</td>
+<td>Number of bytes to read into the TX FIFO</td>
+</tr>
+<tr>
+<td>[7:6]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[5]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[4]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[2]</td>
+<td>Pause</td>
+<td>Pause after executing, resumed by CTRL RESUME</td>
+</tr>
+<tr>
+<td>[1:0]</td>
+<td>Port</td>
+<td>Destination peripheral port</td>
+</tr>
+</tbody>
+</table>
+<p>A command with TX and RX size both at zero terminates the sequence of commands.</p>
+<h3 id="port-control-0-sio2_reg_port0-3_ctrl0">Port Control 0 (SIO2_REG_PORT[0-3]_CTRL0)</h3>
+<script type="WaveDrom">{reg: [
+{bits: 8,  name: 'att_inactive'},
+{bits: 8,  name: 'att_active'},
+{bits: 8,  name: 'baud_div0'},
+{bits: 8,  name: 'baud_div1'},
+], config:{}}</script>
+<h3 id="port-control-1-sio2_reg_port0-3_ctrl1">Port Control 1 (SIO2_REG_PORT[0-3]_CTRL1)</h3>
+<script type="WaveDrom">{reg: [
+{bits: 16, name: 'sck_active'},
+{bits: 8,  name: 'sck_inactive'},
+{bits: 1},
+{bits: 1,  name: 'mode', rotate: -90},
+{bits: 6},
+], config:{vspace: 70}}</script>
+<h3 id="transmit-sio2_reg_tx-receive-sio2_reg_rx">Transmit (SIO2_REG_TX) &amp; Receive (SIO2_REG_RX)</h3>
+<h3 id="control-register-sio2_reg_ctrl">Control register (SIO2_REG_CTRL)</h3>
+<script type="WaveDrom">{reg: [
+{bits: 1, name: 'start', rotate: -90},
+{bits: 1,  name: 'resume', rotate: -90},
+{bits: 1,  name: 'reset', rotate: -90},
+{bits: 1,  name: 'reset_fifo', rotate: -90},
+{bits: 1,  name: 'timeout_en', rotate: -90},
+{bits: 1,  name: 'error_cont', rotate: -90},
+{bits: 1},
+{bits: 1},
+{bits: 1,  name: 'err_irq', rotate: -90},
+{bits: 1,  name: 'tx_irq', rotate: -90},
+{bits: 20},
+{bits: 1,  name: 'ps1'},
+{bits: 1,  name: 'dir'},
+], config:{vspace:100}}</script>
+<p>With error_cnt set the controller ignores errors and executes all commands regardless.</p>
+<h3 id="command-status-sio2_reg_cmd_stat">Command status (SIO2_REG_CMD_STAT)</h3>
+<script type="WaveDrom">{reg: [
+{bits: 4},
+{bits: 1,  name: 'need_tx', rotate: -90},
+{bits: 1,  name: 'need_rx', rotate: -90},
+{bits: 2},
+{bits: 4,  name: 'index'},
+{bits: 1,  name: 'ready', rotate: -90},
+{bits: 1,  name: 'error', rotate: -90},
+{bits: 1,  name: 'flow_err', rotate: -90},
+{bits: 1,  name: 'ack_miss', rotate: -90},
+{bits: 16,  name: 'queue_errors'},
+], config:{vspace:90}}</script>
+<h3 id="port-status-sio2_reg_port_stat">Port status (SIO2_REG_PORT_STAT)</h3>
+<p>These correspond directly to pins on the IOP. Only the SAS[0-1] traces are connected to the controller ports, and only on fat PS2's, these are all supposedly tied high on later hardware.</p>
+<script type="WaveDrom">{reg: [
+{bits: 1,  name: 'CDC0', rotate: -90},
+{bits: 1,  name: 'CDC1', rotate: -90},
+{bits: 1,  name: 'CDC2', rotate: -90},
+{bits: 1,  name: 'CDC3', rotate: -90},
+{bits: 1,  name: 'SAS0', rotate: -90},
+{bits: 1,  name: 'SAS1', rotate: -90},
+{bits: 1,  name: 'SAS2', rotate: -90},
+{bits: 1,  name: 'SAS3', rotate: -90},
+{bits: 24},
+], config:{vspace:100}}</script>
+<h3 id="fifo-status-sio2_reg_fifo_stat">FIFO status (SIO2_REG_FIFO_STAT)</h3>
+<script type="WaveDrom">{   reg: [
+{bits: 9, name: 'tx_size'},
+{bits: 1},
+{bits: 1,  name: 'tx_full', rotate: -90},
+{bits: 1,  name: 'tx_empty', rotate: -90},
+{bits: 4},
+{bits: 9,  name: 'rx_size'},
+{bits: 1},
+{bits: 1,  name: 'rx_full', rotate: -90},
+{bits: 1,  name: 'rx_empty', rotate: -90},
+{bits: 4},
+], config:{vspace:90}}</script>
+<h3 id="fifo-position-sio2_reg_fifotxrx">FIFO position (SIO2_REG_FIFO[TX|RX])</h3>
+<script type="WaveDrom">{reg: [
+{bits: 8, name: 'head'},
+{bits: 8},
+{bits: 8,  name: 'tail'},
+{bits: 8},
+], config:{}}</script>
+<h3 id="interrupt-status-sio2_reg_irq_stat">Interrupt status (SIO2_REG_IRQ_STAT)</h3>
+<p>Set to clear.</p>
+<p>Controller reset does not clear these bits.</p>
+<script type="WaveDrom">{reg: [
+{bits: 1, name: 'tx', rotate: -90},
+{bits: 1,  name: 'error', rotate: -90},
+{bits: 30},
+], config:{vspace:90}}</script>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.19047be9.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wavedrom/3.1.0/wavedrom.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wavedrom/3.1.0/skins/default.js"></script>
+      
+        <script src="../../js/wavedrom_loader.js"></script>
+      
+    
+  </body>
+</html>
