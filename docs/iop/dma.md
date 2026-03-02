@@ -35,3 +35,5 @@
 | BCR  | 0x4 | RW | Block size  |
 | CHCR | 0x8 | RW | Channel control register  |
 | TADR | 0xc | RW | Tag address |
+
+
