@@ -47,12 +47,12 @@ wavedrom (
         {bits: 2,  name: 'port', rotate: -90},
         {bits: 1,  name: 'pause', rotate: -90},
         {bits: 1},
-        {bits: 1,  name: 'tx_dma', rotate: -90},
-        {bits: 1,  name: 'rx_dma', rotate: -90},
+        {bits: 1,  name: 'tx\_dma', rotate: -90},
+        {bits: 1,  name: 'rx\_dma', rotate: -90},
         {bits: 2,  name: 'cfg'},
-        {bits: 9,  name: 'tx_size'},
+        {bits: 9,  name: 'tx\_size'},
         {bits: 1},
-        {bits: 9,  name: 'rx_size'},
+        {bits: 9,  name: 'rx\_size'},
         {bits: 3},
         {bits: 1,  name: 'clk_div', rotate: -90},
         {bits: 1,  name: 'ackwait', rotate: -90},
@@ -62,9 +62,9 @@ wavedrom (
 | Bits  | Name | Description |
 |---|---|---|
 | [31]    |   |   |
-| [30]    | clk_div | Selects which divider from PORT_CTRL0 to use. | 
-| [26:18] | rx_size  | Number of bytes to read into the RX FIFO  |
-| [16:8]  | tx_size  | Number of bytes to read into the TX FIFO  |
+| [30]    | clk\_div | Selects which divider from PORT_CTRL0 to use. | 
+| [26:18] | rx\_size  | Number of bytes to read into the RX FIFO  |
+| [16:8]  | tx\_size  | Number of bytes to read into the TX FIFO  |
 | [7:6]   |   |   |
 | [5]     |   |   |
 | [4]     |   |   |
@@ -78,23 +78,38 @@ A command with TX and RX size both at zero terminates the sequence of commands.
 ### Port Control 0 (SIO2_REG_PORT[0-3]_CTRL0)
 wavedrom (
     {reg: [
-    {bits: 8,  name: 'att_inactive'},
-    {bits: 8,  name: 'att_active'},
-    {bits: 8,  name: 'baud_div0'},
-    {bits: 8,  name: 'baud_div1'},
+    {bits: 8,  name: 'att\_inactive'},
+    {bits: 8,  name: 'att\_active'},
+    {bits: 8,  name: 'baud\_div0'},
+    {bits: 8,  name: 'baud\_div1'},
     ], config:{}}
 )
+
+| Bits  | Name | Description |
+|---|---|---|
+| [31:24]  | baud\_div1   | 48mhz divisors for the sclk, command can select between the two |
+| [23:16]  | baud\_div0   | |
+| [15:8]   | att\_active  | Delay between asserting DTR and starting transfer in sclk periods (minimum: 2) |
+| [7:0]    | att\_inactive| Delay between releasing DTR and reasserting it (minimum: 2)|
+
 
 ### Port Control 1 (SIO2_REG_PORT[0-3]_CTRL1)
 wavedrom (
     {reg: [
-    {bits: 16, name: 'sck_active'},
-    {bits: 8,  name: 'sck_inactive'},
+    {bits: 16, name: 'ack\_timeout'},
+    {bits: 8,  name: 'byte\_delay'},
     {bits: 1},
     {bits: 1,  name: 'mode', rotate: -90},
     {bits: 6},
     ], config:{vspace: 70}}
 )
+
+| Bits  | Name | Description |
+|---|---|---|
+| [25]    | mode | |
+| [23:16] | byte\_delay  | Additional wait cycles between bytes (minumum: 2, for 3 sclk periods total) |
+| [15:0]  | ack\_timeout | Sclk periods to wait for ack from device |
+
 
 ### Transmit (SIO2_REG_TX) & Receive (SIO2_REG_RX)
 
@@ -104,13 +119,13 @@ wavedrom (
     {bits: 1, name: 'start', rotate: -90},
     {bits: 1,  name: 'resume', rotate: -90},
     {bits: 1,  name: 'reset', rotate: -90},
-    {bits: 1,  name: 'reset_fifo', rotate: -90},
-    {bits: 1,  name: 'timeout_en', rotate: -90},
-    {bits: 1,  name: 'error_cont', rotate: -90},
+    {bits: 1,  name: 'reset\_fifo', rotate: -90},
+    {bits: 1,  name: 'timeout\_en', rotate: -90},
+    {bits: 1,  name: 'error\_cont', rotate: -90},
     {bits: 1},
     {bits: 1},
-    {bits: 1,  name: 'err_irq', rotate: -90},
-    {bits: 1,  name: 'tx_irq', rotate: -90},
+    {bits: 1,  name: 'err\_irq', rotate: -90},
+    {bits: 1,  name: 'tx\_irq', rotate: -90},
     {bits: 20},
     {bits: 1,  name: 'ps1'},
     {bits: 1,  name: 'dir'},
